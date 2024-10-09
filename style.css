@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@keyframes fadeInnav {
+    0% { background-color: black; }
+    100% { background-color: #1d1c1c;; }
+  }
+  
+.navbar {
+    margin-top: 0%;
+    padding-top: 0%;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color:black;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  .navbar a:hover{
+    background-color: #1d1c1c;
+    animation: fadeInnav .5s;
+  }
+ 
+  body{
+    color: white;
+   
+    font-family: "Nunito Sans", sans-serif;
+     font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0%;
+    padding: 0%;
+    background-color: #1d1c1c;
+  }
+#logo{
+    float: left;
+}
+#logo:a{
+  font-size: 12px;
+}
+
+#game:iframe{
+  align-self:center;
+
+
+}
+#title{
+ text-align:center;
+ font-size:58px;
+}
