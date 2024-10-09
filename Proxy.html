@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <base href = "https://silver-space-couscous-6wv6w9v4p49h5656-8080.app.github.dev/">
         <!-- Basic boilerplate nothing interesting going on here -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
@@ -92,11 +93,11 @@ background: linear-gradient(90deg, rgba(9,9,121,1) 42%, rgba(0,99,255,1) 87%);
             }
         </style>
         <!-- The UV bundle. It contains most of the code for ultraviolet to function properly -->
-        <script src="https://silver-space-couscous-6wv6w9v4p49h5656-8080.app.github.dev/uv/uv.bundle.js" defer></script>
+        <script src="uv/uv.bundle.js" defer></script>
         <!-- The uv.config.js file we just made. -->
-        <script src="https://silver-space-couscous-6wv6w9v4p49h5656-8080.app.github.dev/uv/uv.config.js" defer></script>
+        <script src="uv/uv.config.js" defer></script>
         <!-- BareMux content -->
-        <script src="https://silver-space-couscous-6wv6w9v4p49h5656-8080.app.github.dev/baremux/index.js" defer></script>
+        <script src="baremux/index.js" defer></script>
     </head>
     <body>
         <div id="main">
@@ -116,13 +117,13 @@ background: linear-gradient(90deg, rgba(9,9,121,1) 42%, rgba(0,99,255,1) 87%);
                     throw new Error("Your browser doesn't support service workers.");
                 }
                 //register the service worker. (We just made that file!)
-                await navigator.serviceWorker.register("https://silver-space-couscous-6wv6w9v4p49h5656-8080.app.github.dev/sw.js");
+                await navigator.serviceWorker.register("/sw.js");
             }
             regSW();
             //function for ease of use
             async function setTransport() {
                 //create a new bare mux connection
-                const conn = new BareMux.BareMuxConnection("https://silver-space-couscous-6wv6w9v4p49h5656-8080.app.github.dev/baremux/worker.js");
+                const conn = new BareMux.BareMuxConnection("/baremux/worker.js");
                 //If you are using http:// change it to ws:// or if using https:// change it to wss://, get the domain name and add "/wisp/" to the end of it
                 const wispUrl = (location.protocol === "https:" ? "wss://" : "ws://") + location.host + "/wisp/";
                 //actually set the transport!!
